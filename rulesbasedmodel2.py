@@ -209,7 +209,6 @@ def save_checkpoint(model, optimizer, epoch, path):
     checkpoint = {
         'epoch': epoch,
         'model_state_dict': model.state_dict(),
-        'optimizer_state_dict': optimizer.state_dict()
     }
     torch.save(checkpoint, path)
     
@@ -217,7 +216,6 @@ def save_checkpoint_rules(model, optimizer, epoch, path, num_saved_rules):
     checkpoint = {
         'epoch': epoch,
         'model_state_dict': model.state_dict(),
-        'optimizer_state_dict': optimizer.state_dict(),
         'num_saved_rules': num_saved_rules  # 🔹 Save the number of rules
     }
     torch.save(checkpoint, path)
