@@ -2091,7 +2091,7 @@ if __name__ == "__main__":
         print(f"No log file selected. Using default: {log_file_path}")
 
             # Setup logging
-    logging.basicConfig(filename=log_file_path, level=logging.DEBUG,
+    logging.basicConfig(filename=log_file_path, level=logging.INFO,
                                 format='%(asctime)s - %(levelname)s - %(message)s')
     
     # ✅ Free up GPU memory before loading model
