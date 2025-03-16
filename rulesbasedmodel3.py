@@ -2887,7 +2887,7 @@ class ReasoningModelGUI:
                             loss = loss_fn(output, target_labels)
                     
                         logging.info(f"Loss computed: {loss.item()}")
-
+                        self.accumulated_loss = self.accumulated_loss + loss
 
                             # Backward pass and optimization
                         loss.backward(retain_graph=True)
