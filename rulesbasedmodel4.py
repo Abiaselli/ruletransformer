@@ -197,7 +197,6 @@ class Muon(torch.optim.Optimizer):
             if self.ddp_enabled:
                 update_prev()
 
-
 def save_checkpoint(model, optimizer, epoch, path):
     checkpoint = {
         'epoch': epoch,
