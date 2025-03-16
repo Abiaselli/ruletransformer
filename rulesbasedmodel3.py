@@ -53,8 +53,8 @@ setup_ddp()
 # Debug for CUDA
 print(f"CUDA Available: {torch.cuda.is_available()}")
 os.environ["CUDA_LAUNCH_BLOCKING"] = "1"
-
-
+os.environ["CUBLAS_LOGINFO_DBG"]= "0"
+os.environ["CUBLAS_LOG_LEVEL"] = "0"
 os.environ["TORCH_USE_CUDA_DSA"] = "1"
 tokenizer = None
 if torch.cuda.is_available():
