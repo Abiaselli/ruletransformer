@@ -65,7 +65,7 @@ training_goal = 0.5
 attempt_limit = 3
 seq_len = 100
 pad_token_id = 0
-set_number_rules = 1000
+set_number_rules = 10000
 
 scaler = torch.amp.GradScaler()  # Initialize GradScaler
 
