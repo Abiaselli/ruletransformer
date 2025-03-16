@@ -2039,7 +2039,7 @@ def training_loop(model, epochs, batch_size, genetic_algo_var, use_chunked_datas
                             loss = loss_fn(output, target_labels)
                     
                         logging.info(f"Loss computed: {loss.item()}")
-
+                        accumulated_loss = accumulated_loss + loss
 
                             # Backward pass and optimization
                         loss.backward(retain_graph=True)
