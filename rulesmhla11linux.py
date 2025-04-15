@@ -2309,7 +2309,7 @@ class ReasoningModelGUI:
 
                      # Prepare inputs and targets for teacher forcing
                     decoder_input, target_labels = prepare_decoder_input_and_target(batch_labels)
-                    del batch_labels
+                    
 
 
                         # Log the shape of the combined mask
